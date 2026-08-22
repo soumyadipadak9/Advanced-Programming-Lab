@@ -29,7 +29,6 @@ def binary_search(arr, key):
     return -1
 
 
-# Input Sizes
 sizes = [100, 500, 1000, 5000, 10000]
 
 linear_best = []
@@ -46,7 +45,7 @@ for n in sizes:
 
     arr = list(range(1, n + 1))
 
-    # ---------------- Linear Best ----------------
+ 
     start = time.perf_counter()
 
     for _ in range(REPEAT):
@@ -56,7 +55,7 @@ for n in sizes:
 
     linear_best.append((end - start) * 1000)
 
-    # ---------------- Linear Average ----------------
+    
     start = time.perf_counter()
 
     for _ in range(REPEAT):
@@ -66,7 +65,7 @@ for n in sizes:
 
     linear_avg.append((end - start) * 1000)
 
-    # ---------------- Linear Worst ----------------
+   
     start = time.perf_counter()
 
     for _ in range(REPEAT):
@@ -76,7 +75,7 @@ for n in sizes:
 
     linear_worst.append((end - start) * 1000)
 
-    # ---------------- Binary Best ----------------
+  
     start = time.perf_counter()
 
     for _ in range(REPEAT):
@@ -86,7 +85,7 @@ for n in sizes:
 
     binary_best.append((end - start) * 1000)
 
-    # ---------------- Binary Average ----------------
+
     start = time.perf_counter()
 
     for _ in range(REPEAT):
@@ -96,7 +95,7 @@ for n in sizes:
 
     binary_avg.append((end - start) * 1000)
 
-    # ---------------- Binary Worst ----------------
+    
     start = time.perf_counter()
 
     for _ in range(REPEAT):
@@ -106,7 +105,7 @@ for n in sizes:
 
     binary_worst.append((end - start) * 1000)
 
-# ---------------- Result Table ----------------
+
 
 print("\nExecution Time (Milliseconds)\n")
 
@@ -123,7 +122,7 @@ for i in range(len(sizes)):
         f"{binary_worst[i]:.4f}"
     )
 
-# ---------------- Plotly Graph ----------------
+
 
 fig = go.Figure()
 
